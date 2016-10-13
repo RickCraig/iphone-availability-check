@@ -7,17 +7,7 @@ const request = require('request'),
   }),
   CronJob = require('cron').CronJob;
 
-const storesUrl = 'https://reserve.cdn-apple.com/GB/en_GB/reserve/iPhone/stores.json';
 const stockUrl = 'https://reserve.cdn-apple.com/GB/en_GB/reserve/iPhone/availability.json';
-
-const getStores = () => {
-  return new Promise((resolve, reject) => {
-    request.get(storesUrl, (err, res) => {
-      if (err) return reject(err);
-      resolve(JSON.parse(res.body));
-    });
-  });
-};
 
 const store = {
   storeNumber: 'R313',
