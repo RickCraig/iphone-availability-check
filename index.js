@@ -42,7 +42,7 @@ new CronJob('0 */10 * * * *', function() {
           const data = {
             from: 'IPhone Notification <rick@spacerevolver.com>',
             to: 'richard.craig@gmail.com',
-            subject: `model.name is now available!`,
+            subject: `${model.name} is now available!`,
             text: 'http://www.apple.com/uk/shop/buy-iphone/iphone-7#01,11'
           };
 
